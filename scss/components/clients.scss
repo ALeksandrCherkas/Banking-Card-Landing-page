@@ -1,0 +1,59 @@
+.clients{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__text{
+        font-family: 'Outfit';
+        margin-bottom: 100px;
+        font-weight: 200;
+        font-size: 24px;
+        text-align: center;
+        color: #fff;
+    }
+    &__container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 1440px;
+        gap: 80px;
+        padding: 60px 0;
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+        
+            left: 0;
+            right: 0;
+            height: 2;
+            background: linear-gradient(to right, transparent, #444, transparent);
+        }
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        img {
+            height: 40px;
+            object-fit: contain;
+            filter: brightness(1.1);
+        }
+    }
+
+}
+@media (max-width: 1440px){
+    .clients__container{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1000px){
+    .clients__container{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,99 @@
+.footer{
+    margin-top: 275px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    hr{
+        width: 1350px;
+    }
+    p{
+        margin-top: 35px;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 150%;
+        text-align: center;
+        color: #fff;
+    }
+    &__content{
+        margin-bottom: 141px;
+        width: 1350px;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+
+        &-logo{
+            a{
+                text-decoration: none;
+                display: flex;
+                margin-bottom: 34px;
+                gap: 10px;
+                span{
+
+                    font-family: 'Cirka';
+                    font-weight: 400;
+                    font-size: 55px;
+                    text-transform: uppercase;
+                    color: #fff;
+                }
+            }
+            p{
+                text-align: start;
+                font-family: 'Outfit';
+                width: 313px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 146%;
+                color: #b4bbc5;
+                
+            }
+        }
+        &-links,
+        &-services,
+        &-insights{
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h3{
+                font-family: 'Outfit';
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 100%;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                margin-bottom: 32px;
+            }
+            a{
+                font-family: 'Outfit';
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 146%;
+                color: #838e9e;
+                text-decoration: none;
+            }
+        }
+     }
+}
+
+@media (max-width: 1400px) {
+    .footer{
+        hr{
+            width: 90%;
+        }
+        &__content{
+            width: 90%;
+        }
+    }
+}
+@media (max-width: 800px) {
+    .footer{
+        
+        &__content{
+            flex-wrap: wrap;
+        }
+    }
+}

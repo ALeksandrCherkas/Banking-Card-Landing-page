@@ -1,0 +1,98 @@
+.hero{
+    padding-top: 100px;
+    box-sizing: border-box;
+    height: 1900px;
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &-title{
+            width: 847px;
+            font-family: 'Cirka' sans-serif;
+            font-size: 104px;
+            font-weight: 300;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 50px;
+        }
+        &-description{
+            margin: 0;
+            width: 612px;
+            height: auto;
+            font-family: 'Outfit';
+            font-weight: 300;
+            font-size: 24px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 50px;
+            
+            
+        }
+        &-btn{
+            font-family: 'Outfit';
+            font-size: 18px;
+            padding: 26px;
+            border-radius: 55px;
+            border-style: none;
+        }
+        
+    }
+    &__images{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            position: absolute;
+            z-index: -1;
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .HeroGrid{
+            top: 160px;
+        }
+        .heroBG{
+            top: 10px;
+        }
+    }
+}
+
+@media (max-width: 800px){
+
+    .hero{
+        margin-bottom: 100px;
+        height: 900px;
+        &__images{
+            .HeroGrid{
+                top: 170px;
+            }
+            .heroBG{
+                top: 300px;
+            }
+        }
+    }
+    .hero__container{
+    
+        &-title{
+            width: 80%;
+            
+        }
+        &-description{
+            width: 80%;
+        }
+    }
+}
+@media (max-width: 700px){
+    .hero__container{
+    
+        &-title{
+            font-size: 45px;
+            
+            
+        }
+        &-description{
+           font-size: 12px;
+        }
+    }
+}

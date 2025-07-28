@@ -1,0 +1,242 @@
+.uniqueness{
+    
+    position: relative;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &__text-block{
+        width: 847px;
+        p{
+            font-family: 'Outfit';
+            font-size: 24px;
+            font-weight: 200;
+            text-align: center;
+            color: #fff;
+            opacity: 0.8;
+        }
+        h1{
+            font-size: 104px;
+            font-family: 'Cirka';
+            text-align: center;
+            font-weight: 300;
+        }
+    }
+    &__images{
+        height: 2193px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: 
+        linear-gradient(0deg,rgba(38, 38, 38, 1) 0%, rgba(0, 0, 0, 0.41) 50%, rgba(0, 0, 0, 1) 100%),
+        url('../../img/background-images/beautiful-geometric-shapes-nature\ 1.png') no-repeat;
+        background-size: cover;
+        background-position: center center;
+        &-block1,
+        &-block2,
+        &-block3{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            border: 2px solid rgba(255, 255, 255, 0.15); 
+            background: radial-gradient(161.21% 160.39% at 5.71% -44.13%, #000 0%, rgba(0, 0, 0, 0.27) 100%);
+            img{
+                width: 62px;
+                height: 62px;
+            }
+            h3{
+                line-height: 1;
+            }
+        }
+
+        &-bgCard{
+            
+            top: 19%;
+            left: 50% auto;
+            position: absolute;
+        }
+        &-block1{
+            top: 10%;
+            left: 20%;
+            border-radius: 36px;
+            width: 193px;
+            height: 162px;
+            padding: 85.5px 70px ;
+            h3{
+                font-family: 'Cirka';
+                font-weight: 300;
+                font-size: 40px;
+                margin: 0;
+            }
+        }
+        &-block2{
+            top: 40%;
+            left: 15%;
+            border-radius: 30px;
+            width: 188px;
+            height: 135px;
+            padding: 70px 43.5px;
+            h3{
+                font-family: 'Cirka';
+                font-weight: 300;
+                font-size: 33px;
+                margin: 0;
+            }
+        }
+        &-block3{
+            top: 30%;
+            right: 10%;
+            border-radius: 36px;
+            width: 228px;
+            height: 208px;
+            padding: 64px 54px;
+            h3{
+                font-family: 'Cirka';
+                font-weight: 300;
+                font-size: 40px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (max-width:850px){
+    .uniqueness{
+        &__text-block{
+            width: 80%;
+        }
+        &__images{
+            img{
+                width: 40%;
+                height: auto;
+            }
+            &-block1,
+            &-block2,
+            &-block3{
+                img{
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+            &-block1{
+                top: 10%;
+                left: 20%;
+                border-radius: 36px;
+                width: 65px;
+                height: 54px;
+                padding: 85.5px 70px ;
+                h3{
+                    font-family: 'Cirka';
+                    font-weight: 300;
+                    font-size: 24px;
+                    margin: 0;
+                }
+            }
+            &-block2{
+                top: 30%;
+                left: 20%;
+                border-radius: 36px;
+                width: 65px;
+                height: 54px;
+                padding: 85.5px 70px ;
+                h3{
+                    font-family: 'Cirka';
+                    font-weight: 300;
+                    font-size: 24px;
+                    margin: 0;
+                }
+            }
+            &-block3{
+                top: 20%;
+                left: 60%;
+                border-radius: 36px;
+                width: 65px;
+                height: 54px;
+                padding: 85.5px 70px ;
+                h3{
+                    font-family: 'Cirka';
+                    font-weight: 300;
+                    font-size: 24px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:600px){
+    .uniqueness{
+        &__text-block{
+            width: 80%;
+        }
+        &__images{
+            img{
+                width: 40%;
+                height: auto;
+            }
+            &-block1,
+            &-block2,
+            &-block3{
+                img{
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+            &-block1{
+                top: 10%;
+                left: 20%;
+                border-radius: 36px;
+                width: 50px;
+                height: 50px;
+                padding: 40px 40px ;
+                h3{
+                    font-family: 'Cirka';
+                    font-weight: 300;
+                    font-size: 12px;
+                    margin: 0;
+                }
+                img{
+                    width: 50%;
+                }
+            }
+            &-block2{
+                top: 30%;
+                left: 20%;
+                border-radius: 36px;
+                width: 50px;
+                height: 50px;
+                padding: 40px 40px ;
+                h3{
+                    font-family: 'Cirka';
+                    font-weight: 300;
+                    font-size: 12px;
+                    margin: 0;
+                }
+                img{
+                    width: 50%;
+                }
+            }
+            &-block3{
+                top: 20%;
+                left: 60%;
+                border-radius: 36px;
+                width: 50px;
+                height: 50px;
+                padding: 40px 40px ;
+                h3{
+                    font-family: 'Cirka';
+                    font-weight: 300;
+                    font-size: 12px;
+                    margin: 0;
+                }
+                img{
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

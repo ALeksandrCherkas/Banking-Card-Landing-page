@@ -1,0 +1,84 @@
+.faq{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 92px;
+    background: linear-gradient(180deg,rgba(38, 38, 38, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    margin-bottom: 82px;
+
+    &-title{
+        line-height: 1;
+        width: 684;
+        font-family: 'Cirka';
+        font-weight: 400;
+        font-size: 104px;
+        text-align: center;
+        color: #fff;
+    }
+    &__accordion{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        &-plus{
+            font-weight: 700;
+            font-size: 26px;
+        }
+        &-item{
+            &.active {
+                background: rgba(255, 255, 255, 0.1);
+            }
+            width: 776px;
+            border-radius: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.15); 
+            
+        }
+        &-block{
+            margin: 24px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        &-content{
+            &.active {
+                display:block;
+            }
+            display: none;
+            margin: 0 24px ;
+            
+            p{
+                font-family: 'Inter';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: #fff;
+                margin-bottom: 24px;
+            }
+            
+        }
+    }
+}
+
+@media (max-width: 1000px){
+    .faq{
+        &-title{
+            width: 80%;
+            height: auto;
+            font-size: 80px;
+        }
+        &__accordion{
+            width: 90%;
+            &-item{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .faq-title{
+        font-size: 45px;
+    }
+}

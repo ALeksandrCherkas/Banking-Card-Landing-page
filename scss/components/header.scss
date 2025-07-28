@@ -1,0 +1,143 @@
+.header{
+    z-index: 1;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    &__burger-menu{
+        display: none;
+        width: 30px;
+    }
+
+    
+    &__navigation{
+        display: none;
+        &-closeBtn{
+            padding: 5px 20px;
+            border-radius: 10px;
+            font-family: 'Outfit';
+            font-weight: 700;
+        }
+    }
+    &__container{
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 200px;
+        
+        &-first,
+        &-third{
+            display: flex;
+            gap: 50px;
+        }
+        &-second{
+            a{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                span{
+                    font-family: 'Cirka';
+                    font-weight: 400;
+                    font-size: 55px;
+                    text-transform: uppercase;
+                    color: #fff;
+                    }
+            }
+        }
+    }
+    
+    a {
+        text-decoration: none;
+        font-family: "Outfit", sans-serif;
+        font-weight: 600;
+        font-size: 23px;
+        color: #fff;
+    }
+
+}
+
+
+
+@media (max-width: 1500px){
+    .header__container{
+        justify-content: space-between;
+        gap: 100px;
+    }
+}
+@media (max-width: 1200px){
+    .header{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        &__container{
+            &-second{
+                padding-left: 50px;
+            }
+            &-first,
+            &-third{
+                display: none;
+            }
+        }
+
+        &__navigation{
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 240px; 
+            background: rgba(0, 0, 0, 0.95);  
+            backdrop-filter: blur(6px); 
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in-out;
+            z-index: 999; 
+
+            &-block{   
+                margin-top: 100px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                a {
+                    font-size: 20px;
+                    color: #fff;
+                    text-decoration: none;
+                    font-family: 'Outfit', sans-serif;
+                    font-weight: 500;
+                    transition: color 0.3s ease, transform 0.3s ease;
+              
+                    &:hover {
+                      color: #00ffe5; // яркий акцентный цвет на ховер
+                      transform: scale(1.05);
+                    }
+                }
+                button {
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-family: 'Outfit', sans-serif;
+                    border: none;
+                    border-radius: 8px;
+                    background-color: #00ffe5; // акцент
+                    color: #000;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+              
+                    &:hover {
+                      background-color: #00d6c3;
+                    }
+                }
+            }
+            &.active{
+                display: block;
+                transform: translateX(0);
+            }
+            
+        }
+    }
+    .header__burger-menu{
+        display: block;
+        padding-right: 50px;
+    }
+}
+

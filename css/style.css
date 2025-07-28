@@ -1,0 +1,1101 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
+@font-face {
+  font-family: "Cirka";
+  src: url("../fonts/Cirka/Cirka Bold 700.otf") format("otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Cirka";
+  src: url("../fonts/Cirka/Cirka Light 300.otf") format("otf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Cirka";
+  src: url("../fonts/Cirka/Cirka Regular 400.ttf") format("otf");
+  font-weight: 400;
+}
+.header {
+  z-index: 1;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.header__burger-menu {
+  display: none;
+  width: 30px;
+}
+.header__navigation {
+  display: none;
+}
+.header__navigation-closeBtn {
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-family: "Outfit";
+  font-weight: 700;
+}
+.header__container {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 200px;
+}
+.header__container-first, .header__container-third {
+  display: flex;
+  gap: 50px;
+}
+.header__container-second a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header__container-second a span {
+  font-family: "Cirka";
+  font-weight: 400;
+  font-size: 55px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.header a {
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 23px;
+  color: #fff;
+}
+
+@media (max-width: 1500px) {
+  .header__container {
+    justify-content: space-between;
+    gap: 100px;
+  }
+}
+@media (max-width: 1200px) {
+  .header {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .header__container-second {
+    padding-left: 50px;
+  }
+  .header__container-first, .header__container-third {
+    display: none;
+  }
+  .header__navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 240px;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(6px);
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 999;
+  }
+  .header__navigation-block {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .header__navigation-block a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .header__navigation-block a:hover {
+    color: #00ffe5;
+    transform: scale(1.05);
+  }
+  .header__navigation-block button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Outfit", sans-serif;
+    border: none;
+    border-radius: 8px;
+    background-color: #00ffe5;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .header__navigation-block button:hover {
+    background-color: #00d6c3;
+  }
+  .header__navigation.active {
+    display: block;
+    transform: translateX(0);
+  }
+  .header__burger-menu {
+    display: block;
+    padding-right: 50px;
+  }
+}
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+.hero {
+  padding-top: 100px;
+  box-sizing: border-box;
+  height: 1900px;
+}
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero__container-title {
+  width: 847px;
+  font-family: "Cirka" sans-serif;
+  font-size: 104px;
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 50px;
+}
+.hero__container-description {
+  margin: 0;
+  width: 612px;
+  height: auto;
+  font-family: "Outfit";
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 50px;
+}
+.hero__container-btn {
+  font-family: "Outfit";
+  font-size: 18px;
+  padding: 26px;
+  border-radius: 55px;
+  border-style: none;
+}
+.hero__images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__images img {
+  position: absolute;
+  z-index: -1;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.hero__images .HeroGrid {
+  top: 160px;
+}
+.hero__images .heroBG {
+  top: 10px;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    margin-bottom: 100px;
+    height: 900px;
+  }
+  .hero__images .HeroGrid {
+    top: 170px;
+  }
+  .hero__images .heroBG {
+    top: 300px;
+  }
+  .hero__container-title {
+    width: 80%;
+  }
+  .hero__container-description {
+    width: 80%;
+  }
+}
+@media (max-width: 700px) {
+  .hero__container-title {
+    font-size: 45px;
+  }
+  .hero__container-description {
+    font-size: 12px;
+  }
+}
+.clients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.clients__text {
+  font-family: "Outfit";
+  margin-bottom: 100px;
+  font-weight: 200;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+}
+.clients__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 1440px;
+  gap: 80px;
+  padding: 60px 0;
+}
+.clients__container::after, .clients__container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2;
+  background: linear-gradient(to right, transparent, #444, transparent);
+}
+.clients__container::before {
+  top: 0;
+}
+.clients__container::after {
+  bottom: 0;
+}
+.clients__container img {
+  height: 40px;
+  object-fit: contain;
+  filter: brightness(1.1);
+}
+
+@media (max-width: 1440px) {
+  .clients__container {
+    width: 100%;
+  }
+}
+@media (max-width: 1000px) {
+  .clients__container {
+    flex-direction: column;
+  }
+}
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.features h3 {
+  opacity: 0.8;
+  font-family: "Outfit";
+  font-size: 24px;
+  font-weight: 200;
+  margin-top: 274px;
+  margin-bottom: 71px;
+}
+.features__container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1460px;
+}
+.features__card--features, .features__card--family, .features__card--onboarding {
+  background: radial-gradient(161.21% 160.39% at 5.71% -44.13%, #363636 0%, rgba(26, 26, 26, 0.27) 100%);
+  border-radius: 51px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  height: 245px;
+  padding: 107px 0;
+}
+.features__card--features {
+  width: 465px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.features__card--features h1 {
+  height: 104;
+  width: 352px;
+  font-size: 65px;
+  line-height: 88%;
+  font-family: "Cirka";
+  font-weight: 300;
+  margin: 0 0 45px 0;
+}
+.features__card--onboarding {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.features__card--onboarding-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 387px;
+  margin-left: 46px;
+}
+.features__card--onboarding-text h1 {
+  font-size: 65;
+  line-height: 88%;
+  font-family: "Cirka";
+  font-weight: 300;
+  margin: 0;
+}
+.features__card--onboarding-text p {
+  font-size: 24px;
+  color: #fff;
+  opacity: 0.5;
+  margin: 0;
+  font-family: "Outfit";
+}
+.features__card--onboarding img {
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+}
+.features__card--icon {
+  width: 352px;
+  display: flex;
+  justify-content: space-between;
+}
+.features__card--onboarding {
+  width: 954px;
+}
+.features__card--family {
+  margin-top: 40px;
+  z-index: 1;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.features__card--family-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 480px;
+  margin-left: 46px;
+}
+.features__card--family-text h1 {
+  font-size: 65;
+  line-height: 88%;
+  font-family: "Cirka";
+  font-weight: 300;
+  margin: 0;
+}
+.features__card--family-text p {
+  font-size: 24px;
+  color: #fff;
+  opacity: 0.5;
+  margin: 0;
+  line-height: 123%;
+  font-family: "Outfit";
+  font-weight: 200;
+}
+.features__card--family img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (max-width: 1460px) {
+  .features__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .features__card {
+    width: 90%;
+  }
+  .features__card--features h1 {
+    text-align: center;
+  }
+}
+@media (max-width: 1300px) {
+  .features__card--family {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .features__card--family img {
+    position: relative;
+  }
+  .features__card--features h1 {
+    text-align: center;
+  }
+}
+@media (max-width: 1300px) {
+  .features__card--onboarding img {
+    scale: 0.8;
+  }
+}
+@media (max-width: 900px) {
+  .features__card--onboarding {
+    position: relative;
+    height: 442px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .features__card--onboarding-text {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    align-items: center;
+    margin: 0;
+    width: 90%;
+  }
+  .features__card--onboarding-text h1 {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+  }
+  .features__card--onboarding-text p {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+  .features__card--onboarding img {
+    position: absolute;
+    left: 10%;
+    bottom: -50px;
+  }
+}
+@media (max-width: 500px) {
+  .features__card--features {
+    height: auto;
+    padding: 40px 0;
+  }
+  .features__card--icon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .features__card--icon img {
+    width: 40%;
+    height: auto;
+  }
+}
+.uniqueness {
+  position: relative;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.uniqueness__text-block {
+  width: 847px;
+}
+.uniqueness__text-block p {
+  font-family: "Outfit";
+  font-size: 24px;
+  font-weight: 200;
+  text-align: center;
+  color: #fff;
+  opacity: 0.8;
+}
+.uniqueness__text-block h1 {
+  font-size: 104px;
+  font-family: "Cirka";
+  text-align: center;
+  font-weight: 300;
+}
+.uniqueness__images {
+  height: 2193px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(0deg, rgb(38, 38, 38) 0%, rgba(0, 0, 0, 0.41) 50%, rgb(0, 0, 0) 100%), url("../../img/background-images/beautiful-geometric-shapes-nature 1.png") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.uniqueness__images-block1, .uniqueness__images-block2, .uniqueness__images-block3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  background: radial-gradient(161.21% 160.39% at 5.71% -44.13%, #000 0%, rgba(0, 0, 0, 0.27) 100%);
+}
+.uniqueness__images-block1 img, .uniqueness__images-block2 img, .uniqueness__images-block3 img {
+  width: 62px;
+  height: 62px;
+}
+.uniqueness__images-block1 h3, .uniqueness__images-block2 h3, .uniqueness__images-block3 h3 {
+  line-height: 1;
+}
+.uniqueness__images-bgCard {
+  top: 19%;
+  left: 50% auto;
+  position: absolute;
+}
+.uniqueness__images-block1 {
+  top: 10%;
+  left: 20%;
+  border-radius: 36px;
+  width: 193px;
+  height: 162px;
+  padding: 85.5px 70px;
+}
+.uniqueness__images-block1 h3 {
+  font-family: "Cirka";
+  font-weight: 300;
+  font-size: 40px;
+  margin: 0;
+}
+.uniqueness__images-block2 {
+  top: 40%;
+  left: 15%;
+  border-radius: 30px;
+  width: 188px;
+  height: 135px;
+  padding: 70px 43.5px;
+}
+.uniqueness__images-block2 h3 {
+  font-family: "Cirka";
+  font-weight: 300;
+  font-size: 33px;
+  margin: 0;
+}
+.uniqueness__images-block3 {
+  top: 30%;
+  right: 10%;
+  border-radius: 36px;
+  width: 228px;
+  height: 208px;
+  padding: 64px 54px;
+}
+.uniqueness__images-block3 h3 {
+  font-family: "Cirka";
+  font-weight: 300;
+  font-size: 40px;
+  margin: 0;
+}
+
+@media (max-width: 850px) {
+  .uniqueness__text-block {
+    width: 80%;
+  }
+  .uniqueness__images img {
+    width: 40%;
+    height: auto;
+  }
+  .uniqueness__images-block1 img, .uniqueness__images-block2 img, .uniqueness__images-block3 img {
+    width: 42px;
+    height: 42px;
+  }
+  .uniqueness__images-block1 {
+    top: 10%;
+    left: 20%;
+    border-radius: 36px;
+    width: 65px;
+    height: 54px;
+    padding: 85.5px 70px;
+  }
+  .uniqueness__images-block1 h3 {
+    font-family: "Cirka";
+    font-weight: 300;
+    font-size: 24px;
+    margin: 0;
+  }
+  .uniqueness__images-block2 {
+    top: 30%;
+    left: 20%;
+    border-radius: 36px;
+    width: 65px;
+    height: 54px;
+    padding: 85.5px 70px;
+  }
+  .uniqueness__images-block2 h3 {
+    font-family: "Cirka";
+    font-weight: 300;
+    font-size: 24px;
+    margin: 0;
+  }
+  .uniqueness__images-block3 {
+    top: 20%;
+    left: 60%;
+    border-radius: 36px;
+    width: 65px;
+    height: 54px;
+    padding: 85.5px 70px;
+  }
+  .uniqueness__images-block3 h3 {
+    font-family: "Cirka";
+    font-weight: 300;
+    font-size: 24px;
+    margin: 0;
+  }
+}
+@media (max-width: 600px) {
+  .uniqueness__text-block {
+    width: 80%;
+  }
+  .uniqueness__images img {
+    width: 40%;
+    height: auto;
+  }
+  .uniqueness__images-block1 img, .uniqueness__images-block2 img, .uniqueness__images-block3 img {
+    width: 42px;
+    height: 42px;
+  }
+  .uniqueness__images-block1 {
+    top: 10%;
+    left: 20%;
+    border-radius: 36px;
+    width: 50px;
+    height: 50px;
+    padding: 40px 40px;
+  }
+  .uniqueness__images-block1 h3 {
+    font-family: "Cirka";
+    font-weight: 300;
+    font-size: 12px;
+    margin: 0;
+  }
+  .uniqueness__images-block1 img {
+    width: 50%;
+  }
+  .uniqueness__images-block2 {
+    top: 30%;
+    left: 20%;
+    border-radius: 36px;
+    width: 50px;
+    height: 50px;
+    padding: 40px 40px;
+  }
+  .uniqueness__images-block2 h3 {
+    font-family: "Cirka";
+    font-weight: 300;
+    font-size: 12px;
+    margin: 0;
+  }
+  .uniqueness__images-block2 img {
+    width: 50%;
+  }
+  .uniqueness__images-block3 {
+    top: 20%;
+    left: 60%;
+    border-radius: 36px;
+    width: 50px;
+    height: 50px;
+    padding: 40px 40px;
+  }
+  .uniqueness__images-block3 h3 {
+    font-family: "Cirka";
+    font-weight: 300;
+    font-size: 12px;
+    margin: 0;
+  }
+  .uniqueness__images-block3 img {
+    width: 50%;
+  }
+}
+.saving {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #262626;
+  height: 1034px;
+}
+.saving__text-block {
+  margin-bottom: 79px;
+  width: 798;
+  height: 261px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.saving__text-block h1 {
+  font-family: "Cirka";
+  font-size: 104px;
+  font-weight: 300;
+  line-height: 88%;
+  text-align: center;
+}
+.saving__text-block p {
+  font-family: "Outfit";
+  font-weight: 200;
+  font-size: 24px;
+  text-align: center;
+}
+.saving__cards {
+  display: flex;
+  gap: 37px;
+}
+.saving__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 461px;
+  height: 638px;
+  border-radius: 50px;
+  position: relative;
+}
+.saving__card--card1 {
+  background-image: url("../../img/background-images/asian-hiker-woman-standing-near-camping-tent-carpathian-mountains-tourist-enjoy-mounta 1.png");
+}
+.saving__card--card2 {
+  background-image: url("../../img/background-images/carefree-family-having-fun-while-moving-into-new-home 1.png");
+}
+.saving__card--card3 {
+  background-image: url("../../img/background-images/silhouettes-wedding-couple-standing-rays-sun-before-mountain-landscape 1.png");
+}
+.saving__card-content {
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  position: absolute;
+  bottom: 20px;
+  border-radius: 30px;
+  width: 422px;
+  height: 172px;
+  backdrop-filter: blur(202.4965209961px);
+  background: radial-gradient(161.21% 160.39% at 5.71% -44.13%, #000 0%, rgba(0, 0, 0, 0.27) 100%);
+}
+.saving__card-title, .saving__card-text {
+  margin-left: 40px;
+}
+.saving__card-title {
+  margin-top: 42px;
+  margin-bottom: 18.5px;
+  line-height: 100%;
+  font-weight: 700;
+  font-size: 40px;
+  color: #fff;
+}
+.saving__card-text {
+  font-family: "Outfit";
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 100%;
+  color: #fff;
+  opacity: 0.5;
+  width: 293px;
+}
+
+@media (max-width: 1500px) {
+  .saving__slider {
+    position: relative;
+    width: 100%;
+  }
+  .saving__card-content {
+    width: 90%;
+  }
+}
+@media (max-width: 1100px) {
+  .saving__card-title {
+    margin-top: 42px;
+    margin-bottom: 18.5px;
+    line-height: 100%;
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+  }
+  .saving__card-text {
+    font-family: "Outfit";
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 100%;
+    color: #fff;
+    opacity: 0.5;
+    width: auto;
+  }
+}
+@media (max-width: 900px) {
+  .saving__slider {
+    overflow-x: auto;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+  }
+  .saving__cards {
+    display: flex;
+    gap: 37px;
+    padding: 20px;
+    min-width: max-content;
+  }
+}
+@media (max-width: 800px) {
+  .saving__text-block {
+    width: 80%;
+    gap: 15px;
+    height: auto;
+  }
+  .saving__text-block h1 {
+    font-size: 45px;
+    height: auto;
+  }
+  .saving__text-block p {
+    font-size: 24px;
+    height: auto;
+  }
+}
+.customized {
+  margin-top: 174px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 1802;
+  background-image: url("../../img/background-images/CusomizedBG.png");
+  background-size: cover;
+}
+.customized::before {
+  content: "";
+  background: linear-gradient(180deg, rgb(38, 38, 38) 0%, rgb(0, 0, 0) 100%);
+  height: 174px;
+  width: 100%;
+  position: absolute;
+  top: -174px;
+}
+.customized__content {
+  position: relative;
+  width: 1509px;
+  height: 208px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.customized__content h1 {
+  width: 700px;
+  font-family: "Cirka";
+  font-weight: 300;
+  font-size: 104px;
+  line-height: 1;
+  color: #fff;
+}
+.customized__content-block {
+  position: relative;
+  width: 526px;
+}
+.customized__content-block p {
+  font-family: "Outfit";
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1;
+  color: #fff;
+}
+.customized__content-block button {
+  position: absolute;
+  left: 0;
+  bottom: 27px;
+  border-radius: 55px;
+  width: 190px;
+  height: 76px;
+  border: none;
+  font-family: "Outfit";
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+}
+
+@media (max-width: 1500px) {
+  .customized__content {
+    width: 80%;
+  }
+}
+@media (max-width: 1000px) {
+  .customized__content {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .customized__content h1 {
+    font-size: 45px;
+    text-align: center;
+  }
+  .customized__content-block {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: auto;
+    align-items: center;
+    gap: 20px;
+  }
+  .customized__content-block p {
+    font-size: 24px;
+    text-align: center;
+  }
+  .customized__content-block button {
+    top: 0;
+    position: relative;
+  }
+}
+@media (max-width: 1000px) {
+  .customized {
+    height: 100%;
+  }
+}
+.faq {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 92px;
+  background: linear-gradient(180deg, rgb(38, 38, 38) 0%, rgb(0, 0, 0) 100%);
+  margin-bottom: 82px;
+}
+.faq-title {
+  line-height: 1;
+  width: 684;
+  font-family: "Cirka";
+  font-weight: 400;
+  font-size: 104px;
+  text-align: center;
+  color: #fff;
+}
+.faq__accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.faq__accordion-plus {
+  font-weight: 700;
+  font-size: 26px;
+}
+.faq__accordion-item {
+  width: 776px;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+.faq__accordion-item.active {
+  background: rgba(255, 255, 255, 0.1);
+}
+.faq__accordion-block {
+  margin: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.faq__accordion-content {
+  display: none;
+  margin: 0 24px;
+}
+.faq__accordion-content.active {
+  display: block;
+}
+.faq__accordion-content p {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1000px) {
+  .faq-title {
+    width: 80%;
+    height: auto;
+    font-size: 80px;
+  }
+  .faq__accordion {
+    width: 90%;
+  }
+  .faq__accordion-item {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 45px;
+  }
+}
+.footer {
+  margin-top: 275px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer hr {
+  width: 1350px;
+}
+.footer p {
+  margin-top: 35px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  text-align: center;
+  color: #fff;
+}
+.footer__content {
+  margin-bottom: 141px;
+  width: 1350px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+}
+.footer__content-logo a {
+  text-decoration: none;
+  display: flex;
+  margin-bottom: 34px;
+  gap: 10px;
+}
+.footer__content-logo a span {
+  font-family: "Cirka";
+  font-weight: 400;
+  font-size: 55px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.footer__content-logo p {
+  text-align: start;
+  font-family: "Outfit";
+  width: 313px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 146%;
+  color: #b4bbc5;
+}
+.footer__content-links, .footer__content-services, .footer__content-insights {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer__content-links h3, .footer__content-services h3, .footer__content-insights h3 {
+  font-family: "Outfit";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.footer__content-links a, .footer__content-services a, .footer__content-insights a {
+  font-family: "Outfit";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 146%;
+  color: #838e9e;
+  text-decoration: none;
+}
+
+@media (max-width: 1400px) {
+  .footer hr {
+    width: 90%;
+  }
+  .footer__content {
+    width: 90%;
+  }
+}
+@media (max-width: 800px) {
+  .footer__content {
+    flex-wrap: wrap;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

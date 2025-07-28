@@ -1,0 +1,157 @@
+.saving{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #262626;
+    height: 1034px;
+
+    &__text-block{
+        margin-bottom: 79px;
+        width: 798;
+        height: 261px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h1{
+            font-family: 'Cirka';
+            font-size: 104px;
+            font-weight: 300;
+            line-height: 88%;
+            text-align: center;
+        }
+        p{
+            font-family: 'Outfit';
+            font-weight: 200;
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+    &__cards{
+        display: flex;
+        gap: 37px;
+    }
+    &__card{
+        display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 461px;
+            height: 638px;
+            border-radius: 50px;
+            position: relative;
+
+            &--card1{
+                background-image: url('../../img/background-images/asian-hiker-woman-standing-near-camping-tent-carpathian-mountains-tourist-enjoy-mounta\ 1.png');
+            }
+            &--card2{
+                background-image: url('../../img/background-images/carefree-family-having-fun-while-moving-into-new-home\ 1.png');
+            }
+            &--card3{
+                background-image: url('../../img/background-images/silhouettes-wedding-couple-standing-rays-sun-before-mountain-landscape\ 1.png');
+            }
+            &-content{
+                border: 2px solid rgba(255, 255, 255, 0.15); 
+                position: absolute;
+                bottom: 20px;
+                border-radius: 30px;
+                width: 422px;
+                height: 172px;
+                backdrop-filter: blur(202.49652099609375px);
+                background: radial-gradient(161.21% 160.39% at 5.71% -44.13%, #000 0%, rgba(0, 0, 0, 0.27) 100%);
+            }
+            &-title,
+            &-text{
+                margin-left: 40px;
+            }
+
+            &-title{
+                margin-top: 42px;
+                margin-bottom: 18.5px;
+                line-height: 100%;
+                font-weight: 700;
+                font-size: 40px;
+                color: #fff;
+            }
+            &-text{
+                font-family: 'Outfit';
+                font-weight: 200;
+                font-size: 20px;
+                line-height: 100%;
+                color: #fff;
+                opacity: 0.5;
+                width: 293px;
+            }
+    }
+
+    
+}
+
+
+@media (max-width: 1500px){
+    .saving{
+        &__slider{
+            position: relative;
+            width: 100%;
+        }
+
+        &__card{
+            &-content{
+                width: 90%;     
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px){
+    .saving{
+        &__card{
+            &-title{
+                margin-top: 42px;
+                margin-bottom: 18.5px;
+                line-height: 100%;
+                font-weight: 700;
+                font-size: 40px;
+                color: #fff;
+            }
+            &-text{
+                font-family: 'Outfit';
+                font-weight: 200;
+                font-size: 20px;
+                line-height: 100%;
+                color: #fff;
+                opacity: 0.5;
+                width: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px){
+    .saving__slider {
+        overflow-x: auto;
+        cursor: grab;
+        -webkit-overflow-scrolling: touch; // для плавности на iOS
+      }
+      
+      .saving__cards {
+        display: flex;
+        gap: 37px;
+        padding: 20px;
+        min-width: max-content; // чтобы flex-элементы не сжимались
+      }
+}
+
+@media (max-width: 800px){
+    .saving__text-block{
+        width: 80%;
+        gap: 15px;
+        height: auto;
+        h1{
+            font-size: 45px;
+            height: auto;
+        }
+        p{
+            font-size: 24px;
+            height: auto;
+        }
+    }
+}
